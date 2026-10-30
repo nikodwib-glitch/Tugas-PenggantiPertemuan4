@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contoh website toko sepatu dengan Bootstrap 5.">
+  <title>NikoHub - Toko Sepatu</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="notice">Selamat datang di toko sepatu NikoHub</div>
+  <header class="bg-white border-bottom">
+    <nav class="container navbar-simple" aria-label="Navigasi utama">
+      <a class="brand" href="#beranda">NikoHub</a>
+      <button class="menu-button" id="navToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#beranda">Beranda</a>
+        <a href="#koleksi">Sepatu</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+      <a class="cart" href="#koleksi">Keranjang (<span id="cartCount">0</span>)</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container my-4" id="beranda">
+      <div class="hero row align-items-center g-4 p-4 p-md-5">
+        <div class="col-md-6">
+          <h1>Selamat datang di NikoHub</h1>
+          <p>Kami menyediakan sepatu untuk kegiatan sehari-hari, olahraga, dan jalan-jalan. Pilih sepatu yang sesuai dengan kebutuhanmu.</p>
+          <a class="btn btn-primary" href="#koleksi">Lihat Koleksi Sepatu</a>
+        </div>
+        <div class="col-md-6">
+          <img class="hero-img" src="img/hero-shoe.jpg" alt="Contoh sepatu sneakers warna merah">
+        </div>
+      </div>
+      <p class="sample-note">Catatan: nama produk, foto, dan harga di halaman ini hanya contoh.</p>
+    </section>
+
+    <section class="container py-4" id="koleksi">
+      <div class="text-center mb-4">
+        <h2>Koleksi Sepatu</h2>
+        <p class="text-secondary">Berikut beberapa contoh sepatu yang dijual.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100">
+            <img src="img/street-runner.jpg" class="card-img-top product-img" alt="Sepatu sneakers merah">
+            <div class="card-body">
+              <h3 class="h5 card-title">Street Runner</h3>
+              <p class="card-text">Sneakers untuk dipakai sehari-hari.</p>
+              <p class="price">Rp489.000</p>
+              <button class="btn btn-outline-primary add-button" data-product="Street Runner">Tambah ke keranjang</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100">
+            <img src="img/cloud-pace.jpg" class="card-img-top product-img" alt="Sepatu olahraga warna terang">
+            <div class="card-body">
+              <h3 class="h5 card-title">Cloud Pace</h3>
+              <p class="card-text">Sepatu ringan untuk olahraga.</p>
+              <p class="price">Rp629.000</p>
+              <button class="btn btn-outline-primary add-button" data-product="Cloud Pace">Tambah ke keranjang</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100">
+            <img src="img/canvas-low.jpg" class="card-img-top product-img" alt="Sepatu kanvas kasual">
+            <div class="card-body">
+              <h3 class="h5 card-title">Canvas Low</h3>
+              <p class="card-text">Sepatu kanvas untuk gaya kasual.</p>
+              <p class="price">Rp359.000</p>
+              <button class="btn btn-outline-primary add-button" data-product="Canvas Low">Tambah ke keranjang</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container py-5" id="tentang">
+      <div class="about-box">
+        <h2>Tentang NikoHub</h2>
+        <p>NikoHub adalah contoh toko sepatu online. Halaman ini dibuat untuk menampilkan produk dan membantu pengunjung memilih sepatu.</p>
+        <div class="row g-3 mt-2">
+          <div class="col-md-4"><div class="simple-box"><h3 class="h5">Banyak Pilihan</h3><p class="mb-0">Ada sepatu sneakers, olahraga, dan kasual.</p></div></div>
+          <div class="col-md-4"><div class="simple-box"><h3 class="h5">Mudah Dipilih</h3><p class="mb-0">Informasi produk ditampilkan dengan jelas.</p></div></div>
+          <div class="col-md-4"><div class="simple-box"><h3 class="h5">Hubungi Kami</h3><p class="mb-0">Kirim pesan jika ingin bertanya tentang produk.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container py-4 mb-5" id="kontak">
+      <div class="contact-box">
+        <h2>Kontak Kami</h2>
+        <p>Isi form berikut untuk mengirim pertanyaan.</p>
+        <form id="contactForm">
+          <div class="mb-3"><label class="form-label" for="customerName">Nama</label><input class="form-control" id="customerName" name="name" type="text" required></div>
+          <div class="mb-3"><label class="form-label" for="customerEmail">Email</label><input class="form-control" id="customerEmail" name="email" type="email" required></div>
+          <div class="mb-3"><label class="form-label" for="customerMessage">Pesan</label><textarea class="form-control" id="customerMessage" name="message" rows="3" required></textarea></div>
+          <button class="btn btn-primary" type="submit">Kirim Pesan</button>
+          <p id="formMessage" class="mt-3 mb-0" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container d-flex justify-content-between flex-wrap gap-2">
+      <span>© 2026 NikoHub</span><span>Contoh proyek toko sepatu</span>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
